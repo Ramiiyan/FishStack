@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckOut.CheckOutController">
+   <children>
+      <TableView fx:id="billTbl" layoutY="355.0" prefHeight="298.0" prefWidth="800.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="355.0">
+        <columns>
+          <TableColumn fx:id="dateCol" prefWidth="94.39999544620514" text="Date" />
+          <TableColumn fx:id="customerIdCol" prefWidth="90.40001678466797" text="Custermer ID" />
+            <TableColumn fx:id="proIdCol" prefWidth="100.0" text="Product ID" />
+            <TableColumn fx:id="proNameCol" prefWidth="140.79998779296875" text="Product Name" />
+            <TableColumn fx:id="proPriceCol" minWidth="1.60003662109375" prefWidth="117.60000610351562" text="Product Price" />
+            <TableColumn fx:id="qtyCol" minWidth="0.0" prefWidth="94.4000244140625" text="Quantity" />
+            <TableColumn fx:id="subTotalCol" prefWidth="167.199951171875" text="Sub Total" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <HBox layoutX="631.0" layoutY="635.0" prefHeight="26.0" prefWidth="151.0">
+         <children>
+            <Label fx:id="grandtotal" prefHeight="18.0" prefWidth="113.0" />
+         </children>
+      </HBox>
+      <Button fx:id="btnLoad" layoutX="520.0" layoutY="288.0" mnemonicParsing="false" onAction="#loadDB" prefHeight="34.0" prefWidth="120.0" text="Get Bill" />
+      <VBox layoutX="5.0" layoutY="6.0" prefHeight="307.0" prefWidth="407.0" spacing="3.0">
+         <children>
+            <Label layoutX="10.0" layoutY="74.0" prefHeight="26.0" prefWidth="409.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000000;" text="Secure Payment Info" />
+            <ImageView fitHeight="49.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@credit_lg.jpg" />
+               </image>
+            </ImageView>
+            <Label text="Card Holder's Name" />
+            <TextField fx:id="cardName" promptText="(as it appears on your card)" />
+            <Label layoutX="10.0" layoutY="56.0" text="Card Number" />
+            <TextField fx:id="cardNumber" promptText="(no dashes or spaces)" />
+            <Label prefHeight="24.0" prefWidth="110.0" text="Security Code  " textAlignment="CENTER" />
+            <HBox prefHeight="75.0" prefWidth="407.0">
+               <children>
+                  <TextField fx:id="cVV" prefHeight="34.0" prefWidth="80.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="30.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <ImageView fitHeight="74.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@your_cvv.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <Button layoutX="660.0" layoutY="288.0" mnemonicParsing="false" onAction="#pay" prefHeight="34.0" prefWidth="120.0" text="Pay" />
+      <Label layoutX="630.0" layoutY="659.0" prefHeight="20.0" prefWidth="60.0" text=" Total :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

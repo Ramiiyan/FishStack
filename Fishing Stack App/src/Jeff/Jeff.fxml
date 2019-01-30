@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Jeff.jeffController">
+    <children>
+        <TableView fx:id="billTbl" layoutY="194.0" prefHeight="459.0" prefWidth="800.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0">
+            <columns>
+                <TableColumn fx:id="customerIdCol" prefWidth="108.80001831054688" text="Custermer ID" />
+                <TableColumn fx:id="proIdCol" prefWidth="136.0" text="Product ID" />
+                <TableColumn fx:id="proNameCol" prefWidth="155.199951171875" text="Product Name" />
+                <TableColumn fx:id="proPriceCol" minWidth="1.60003662109375" prefWidth="119.199951171875" text="Product Price" />
+                <TableColumn fx:id="qtyCol" minWidth="0.0" prefWidth="99.2000732421875" text="Quantity" />
+                <TableColumn fx:id="subTotalCol" prefWidth="181.59991455078125" text="Sub Total" />
+            </columns>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TableView>
+      <HBox alignment="CENTER" layoutX="86.0" layoutY="76.0" prefHeight="38.0" prefWidth="628.0">
+         <children>
+            <Label prefHeight="34.0" prefWidth="120.0" text=" Select the Date :" textAlignment="CENTER" />
+            <ComboBox fx:id="dateCombo" prefHeight="34.0" prefWidth="173.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ComboBox>
+              <Button fx:id="btnLoad" mnemonicParsing="false" onAction="#loadDB1" prefHeight="34.0" prefWidth="128.0" text="Get Data">
+               <HBox.margin>
+                  <Insets right="-1.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="299.0" layoutY="14.0" prefHeight="38.0" prefWidth="238.0" text="Admin's Sign In">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
